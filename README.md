@@ -28,59 +28,6 @@ With this standard data model, MUD can provide all network code to synchronize c
 
 MUD is MIT-licensed, open source and free to use.
 
-## Features
-
-![MUD features](./docs/public/features.png)
-
-### Today
-
-- State synchronization between contracts and clients without custom networking code
-- General purpose indexers (without custom indexing code)
-- Seamless contract upgrades (+ automatic contract upgrades during development)
-- Shared contract state
-- Optimistic updates
-- Automatic type generation for contracts and systems
-- Query language to interact with contract state
-- Data explorer to inspect and modify contract and local state
-- Bitpacking utilities
-
-### Soon
-
-- Local simulation of transactions (including optimistic state)
-- Built-in support for account abstraction
-- Contract package manager
-
-## Quickstart
-
-```
-pnpm create mud@canary my-project
-```
-
-For more information on how to get started, have a look at the [MUD documentation](https://mud.dev/quick-start).
-
-## Talks
-
-<div>
-  <a href="https://www.youtube.com/watch?v=UvIWmzscWp8" target="_blank"><img src="https://img.youtube.com/vi/UvIWmzscWp8/hqdefault.jpg" alt="Getting started with MUD" width="30%" /></a>
-  <a href="https://www.youtube.com/watch?v=j-_Zf8o5Wlo" target="_blank"><img src="https://img.youtube.com/vi/j-_Zf8o5Wlo/hqdefault.jpg" alt="MUD - An Engine for Autonomous Worlds" width="30%" /></a>
-  <a href="https://www.youtube.com/watch?v=mv3jA4USZtg" target="_blank"><img src="https://img.youtube.com/vi/mv3jA4USZtg/hqdefault.jpg" alt="MUD in Practice - How we built OPCraft" width="30%" /></a>
-</div>
-
-## Packages
-
-MUD consists of several libraries. They can be used independently, but are best used together.
-
-| Package                                                                                                           | Version                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **[@latticexyz/recs](/packages/recs)** <br />TypeScript Reactive Entity Component System library                  | [![npm version](https://img.shields.io/npm/v/@latticexyz/recs.svg)](https://www.npmjs.org/package/@latticexyz/recs)         |
-| **[@latticexyz/services](/packages/services)** <br />Go services for indexer, faucet, message relay               | [![npm version](https://img.shields.io/npm/v/@latticexyz/services.svg)](https://www.npmjs.org/package/@latticexyz/services) |
-| **[@latticexyz/cli](/packages/cli)** <br />Command line interface for types, testing, faucet, deployment and more | [![npm version](https://img.shields.io/npm/v/@latticexyz/cli.svg)](https://www.npmjs.org/package/@latticexyz/cli)           |
-| **[@latticexyz/noise](/packages/noise)** <br />Solidity and AssemblyScript implementations of Perlin noise        | [![npm version](https://img.shields.io/npm/v/@latticexyz/noise.svg)](https://www.npmjs.org/package/@latticexyz/noise)       |
-
-## Contribute
-
-We'd love your support in improving MUD! This monorepo includes all of MUD's source code, and pull requests are always welcome. To discuss new features or changes [join our Discord](https://lattice.xyz/discord).
-
 ### Local development setup
 
 !!!
@@ -98,14 +45,36 @@ The following steps are only necessary if you want to contribute to MUD. To use 
 3. Clone the MUD monorepo
 
    ```
-   git clone https://github.com/latticexyz/mud
+   git clone https://github.com/TencentCloudBlockchainRpc/mud-boilerplate.git
    ```
 
 4. Install MUD dependencies and setup local environment
 
    ```
-   cd mud && pnpm install && pnpm build
+   cd mud-boilerplate && git checkout trpc_dev && pnpm install && pnpm build
    ```
+
+### Build with Tencent Cloud Blockchain RPC
+
+After development and debugging. You can deploy your project on public blockchain
+with Tencent Cloud Blockchain RPC.
+Before this, you can get the API Key/Rpc URL following these steps:
+
+- [Register a Tencent Cloud account](https://www.tencentcloud.com/account/register)
+- [Sign in Blockchain RPC console](https://console.tencentcloud.com/bcrpc/terminal)
+- Create New Application
+- Get the API Key/URL of the Mainnet/Testnet
+
+You can find our mud-based minimal example guidance on
+Tencent Cloud Blockchain RPC based deployment.
+
+```
+ cd examples/minimal
+```
+
+More detailed information is in the
+[README.md](https://github.com/TencentCloudBlockchainRpc/mud-boilerplate/blob/main/examples/minimal/README.md)
+for this directory
 
 ### Pull requests
 

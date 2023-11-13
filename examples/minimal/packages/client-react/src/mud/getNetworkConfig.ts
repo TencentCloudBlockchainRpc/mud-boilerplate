@@ -1,4 +1,4 @@
-import { getBurnerPrivateKey } from "@latticexyz/common";
+//import { getBurnerPrivateKey } from "@latticexyz/common";
 import worlds from "contracts/worlds.json";
 import { supportedChains } from "./supportedChains";
 
@@ -22,7 +22,8 @@ export async function getNetworkConfig() {
     : world?.blockNumber ?? 0n;
 
   return {
-    privateKey: getBurnerPrivateKey(),
+    // privateKey: getBurnerPrivateKey(),
+    privateKey: "{YOUR_PRIVATE_KEY}",
     chainId,
     chain,
     faucetServiceUrl: params.get("faucet") ?? chain.faucetUrl,
