@@ -73,7 +73,7 @@ Tencent Cloud Blockchain RPC based deployment.
 ```
 
 More detailed information is in the
-[README.md](https://github.com/TencentCloudBlockchainRpc/mud-boilerplate/blob/main/examples/minimal/README.md)
+[README.md](https://github.com/TencentCloudBlockchainRpc/mud-boilerplate/blob/trpc_dev/examples/minimal/README.md)
 for this directory
 
 ### Pull requests

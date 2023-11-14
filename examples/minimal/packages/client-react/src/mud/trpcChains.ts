@@ -16,11 +16,11 @@ export const tprcChain = defineChain({
   rpcUrls: {
     default: {
       http: ["https://www.tencentcloud-rpc.com/v1/polygon_mumbai/{YOUR_RPC_API_KEY}"],
-      webSocket: ["wss://rpc.ankr.com/polygon_mumbai/ws/{YOUR_RPC_API_KEY}"],
+      webSocket: ["wss://www.tencentcloud-rpc.com/v1/polygon_mumbai/{YOUR_RPC_API_KEY}"],
     },
     public: {
       http: ["https://www.tencentcloud-rpc.com/v1/polygon_mumbai/{YOUR_RPC_API_KEY}"],
-      webSocket: ["wss://rpc.ankr.com/polygon_mumbai/ws/{YOUR_RPC_API_KEY}"],
+      webSocket: ["wss://www.tencentcloud-rpc.com/v1/polygon_mumbai/{YOUR_RPC_API_KEY}"],
     },
   },
   blockExplorers: {
